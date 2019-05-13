@@ -128,10 +128,10 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToolBar}">
                     <ControlTemplate.Resources>
-                        <Style TargetType="{x:Type wpf:PackIcon}" >
+                        <!--<Style TargetType="{x:Type wpf:PackIcon}" >
                             <Setter Property="Width" Value="22" />
                             <Setter Property="Height" Value="22" />
-                        </Style>
+                        </Style>-->
                         <Style TargetType="ListBox" BasedOn="{StaticResource ToolToggleFlatListBox}">
                             <Setter Property="ItemContainerStyle">
                                 <Setter.Value>
