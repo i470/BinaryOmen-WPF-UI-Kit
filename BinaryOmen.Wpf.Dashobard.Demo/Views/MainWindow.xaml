@@ -1,16 +1,48 @@
-﻿<Window x:Class="BinaryOmen.Wpf.Dashobard.Demo.Views.MainWindow"
+﻿<Metro:MetroWindow x:Class="BinaryOmen.Wpf.Dashobard.Demo.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         mc:Ignorable="d"
-        Title="Shell" Height="450" Width="800">
+        xmlns:Metro="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        TextElement.Foreground="WhiteSmoke"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FF1B2136"
+        Title="Binary Omen WPF UI Kit" Height="450" Width="800">
+    <Metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+            <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+            <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+            <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Colors/DarkIndigo.xaml" />
+          
+        </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Metro:MetroWindow.Resources>
+    <Metro:MetroWindow.RightWindowCommands>
+        <Metro:WindowCommands>
+            <Button Content="settings" />
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Width="24" Height="24" Kind="Alien" />
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="deploy cupcakes" />
+                </StackPanel>
+            </Button>
+        </Metro:WindowCommands>
+    </Metro:MetroWindow.RightWindowCommands>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="96"/>
+            <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="301*"/>
         </Grid.ColumnDefinitions>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" Grid.Column="1" Margin="0" />
+        <ContentControl prism:RegionManager.RegionName="MenuRegion" Grid.Column="0" Margin="0" >
+            <ContentControl prism:RegionManager.RegionName="ContentRegion" Grid.Column="1" Margin="0" >
+            </ContentControl>
     </Grid>
-</Window>
+</Metro:MetroWindow>
