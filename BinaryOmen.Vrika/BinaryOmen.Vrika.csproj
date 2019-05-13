@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41A0D830-1C2C-4C2A-A7E8-00E625616B41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BinaryOmen.Vrika</RootNamespace>
+    <AssemblyName>BinaryOmen.Vrika</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Charts\AngularGauge.cs" />
+    <Compile Include="Charts\AngularSection.cs" />
+    <Compile Include="Charts\AxesCollection.cs" />
+    <Compile Include="Charts\Axis.cs" />
+    <Compile Include="Charts\AxisSection.cs" />
+    <Compile Include="Charts\AxisWindowCollection.cs" />
+    <Compile Include="Charts\CandleSeries.cs" />
+    <Compile Include="Charts\CartesianChart.cs" />
+    <Compile Include="Charts\Chart.cs" />
+    <Compile Include="Charts\ColorsCollection.cs" />
+    <Compile Include="Charts\ColumnSeries.cs" />
+    <Compile Include="Charts\Components\AxisSeparatorElement.cs" />
+    <Compile Include="Charts\Components\ChartUpdater.cs" />
+    <Compile Include="Charts\Components\Converters.cs" />
+    <Compile Include="Charts\Components\DefaultXamlReader.cs" />
+    <Compile Include="Charts\Components\IFondeable.cs" />
+    <Compile Include="Charts\Components\ThreadAccess.cs" />
+    <Compile Include="Charts\Components\TooltipDto.cs" />
+    <Compile Include="Charts\Converters\TypeConverters.cs" />
+    <Compile Include="Charts\Core\AxisCore.cs" />
+    <Compile Include="Charts\Core\AxisOrientation.cs" />
+    <Compile Include="Charts\Core\AxisPosition.cs" />
+    <Compile Include="Charts\Core\AxisSectionCore.cs" />
+    <Compile Include="Charts\Core\AxisWindow.cs" />
+    <Compile Include="Charts\Core\AxisWindows.cs" />
+    <Compile Include="Charts\Core\BarLabelPosition.cs" />
+    <Compile Include="Charts\Core\ChartFunctions.cs" />
+    <Compile Include="Charts\Core\Charting.cs" />
+    <Compile Include="Charts\Core\ChartPoint.cs" />
+    <Compile Include="Charts\Core\Charts\CartesianChartCore.cs" />
+    <Compile Include="Charts\Core\Charts\ChartCore.cs" />
+    <Compile Include="Charts\Core\Charts\PieChartCore.cs" />
+    <Compile Include="Charts\Core\ChartUpdater.cs" />
+    <Compile Include="Charts\Core\ChartValues.cs" />
+    <Compile Include="Charts\Core\Configurations\CartesianMapper.cs" />
+    <Compile Include="Charts\Core\Configurations\FinancialMapper.cs" />
+    <Compile Include="Charts\Core\Configurations\GanttMapper.cs" />
+    <Compile Include="Charts\Core\Configurations\IPointEvaluator.cs" />
+    <Compile Include="Charts\Core\Configurations\Mappers.cs" />
+    <Compile Include="Charts\Core\Configurations\PieMapper.cs" />
+    <Compile Include="Charts\Core\Configurations\PolarMapper.cs" />
+    <Compile Include="Charts\Core\Configurations\WeightedMapper.cs" />
+    <Compile Include="Charts\Core\DataLabelViewModel.cs" />
+    <Compile Include="Charts\Core\DateAxisCore.cs" />
+    <Compile Include="Charts\Core\DateAxisWindow.cs" />
+    <Compile Include="Charts\Core\DateAxisWindows.cs" />
+    <Compile Include="Charts\Core\DateSeparatorElementCore.cs" />
+    <Compile Include="Charts\Core\Defaults\AxisLimits.cs" />
+    <Compile Include="Charts\Core\Defaults\DateTimePoint.cs" />
+    <Compile Include="Charts\Core\Defaults\GanttPoint.cs" />
+    <Compile Include="Charts\Core\Defaults\HeatPoint.cs" />
+    <Compile Include="Charts\Core\Defaults\ObservablePoint.cs" />
+    <Compile Include="Charts\Core\Defaults\ObservableValue.cs" />
+    <Compile Include="Charts\Core\Defaults\OHLCPoint.cs" />
+    <Compile Include="Charts\Core\Defaults\PolarPoint.cs" />
+    <Compile Include="Charts\Core\Defaults\ScatterPoint.cs" />
+    <Compile Include="Charts\Core\Definitions\IAreaPoint.cs" />
+    <Compile Include="Charts\Core\Definitions\IAxisSectionView.cs" />
+    <Compile Include="Charts\Core\Definitions\IAxisView.cs" />
+    <Compile Include="Charts\Core\Definitions\IAxisWindow.cs" />
+    <Compile Include="Charts\Core\Definitions\IBezierPointView.cs" />
+    <Compile Include="Charts\Core\Definitions\ICartesianChart.cs" />
+    <Compile Include="Charts\Core\Definitions\ICartesianSeries.cs" />
+    <Compile Include="Charts\Core\Definitions\ICartesianVisualElement.cs" />
+    <Compile Include="Charts\Core\Definitions\IChartPointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IChartView.cs" />
+    <Compile Include="Charts\Core\Definitions\IColumnSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IDateAxisView.cs" />
+    <Compile Include="Charts\Core\Definitions\IFinancialSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IGroupedStackedSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IHeatPointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IHeatSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\ILineSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\ILogarithmicAxisView.cs" />
+    <Compile Include="Charts\Core\Definitions\IOhlcPointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IPieChart.cs" />
+    <Compile Include="Charts\Core\Definitions\IPieSeries.cs" />
+    <Compile Include="Charts\Core\Definitions\IPieSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IPieSlicePointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IRectanglePointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IRowSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IScatterPointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IScatterSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\ISeparatorElementView.cs" />
+    <Compile Include="Charts\Core\Definitions\ISeparatorView.cs" />
+    <Compile Include="Charts\Core\Definitions\ISeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IStackedAreaSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IStackedColumnSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IStackedRowSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IStackModelableSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IStepPointView.cs" />
+    <Compile Include="Charts\Core\Definitions\IVerticalStackedAreaSeriesView.cs" />
+    <Compile Include="Charts\Core\Definitions\IWindowAxisView.cs" />
+    <Compile Include="Charts\Core\Delegates.cs" />
+    <Compile Include="Charts\Core\Dtos\BezierData.cs" />
+    <Compile Include="Charts\Core\Dtos\CoreColor.cs" />
+    <Compile Include="Charts\Core\Dtos\CoreGradientStop.cs" />
+    <Compile Include="Charts\Core\Dtos\CoreLimit.cs" />
+    <Compile Include="Charts\Core\Dtos\CoreMargin.cs" />
+    <Compile Include="Charts\Core\Dtos\CorePoint.cs" />
+    <Compile Include="Charts\Core\Dtos\CoreRectangle.cs" />
+    <Compile Include="Charts\Core\Dtos\CoreSize.cs" />
+    <Compile Include="Charts\Core\Dtos\LabelEvaluation.cs" />
+    <Compile Include="Charts\Core\Dtos\StackedSum.cs" />
+    <Compile Include="Charts\Core\Dtos\TooltipDataViewModel.cs" />
+    <Compile Include="Charts\Core\Events\Delegates.cs" />
+    <Compile Include="Charts\Core\Events\PreviewRangeChangedEventArgs.cs" />
+    <Compile Include="Charts\Core\Events\RangeChangedEventArgs.cs" />
+    <Compile Include="Charts\Core\Helpers\Extentions.cs" />
+    <Compile Include="Charts\Core\Helpers\LiveChartsException.cs" />
+    <Compile Include="Charts\Core\Helpers\NoisyCollection.cs" />
+    <Compile Include="Charts\Core\IChartValues.cs" />
+    <Compile Include="Charts\Core\IObservableChartPoint.cs" />
+    <Compile Include="Charts\Core\LegendLocation.cs" />
+    <Compile Include="Charts\Core\LogarithmicAxisCore.cs" />
+    <Compile Include="Charts\Core\Maps\MapData.cs" />
+    <Compile Include="Charts\Core\PanningOptions.cs" />
+    <Compile Include="Charts\Core\PeriodUnits.cs" />
+    <Compile Include="Charts\Core\PieLabelPosition.cs" />
+    <Compile Include="Charts\Core\PointTracker.cs" />
+    <Compile Include="Charts\Core\ScrollMode.cs" />
+    <Compile Include="Charts\Core\SeparationState.cs" />
+    <Compile Include="Charts\Core\SeparatorConfigurationCore.cs" />
+    <Compile Include="Charts\Core\SeparatorElementCore.cs" />
+    <Compile Include="Charts\Core\Seriesalgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\CandleAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\ColumnAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\HeatAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\LineAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\OhlcAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\PieAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\RowAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\ScatterAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\StackedAreaAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\StackedColumnAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\StackedRowAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\StepLineAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\VerticalLineAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesAlgorithms\VerticalStackedAreaAlgorithm.cs" />
+    <Compile Include="Charts\Core\SeriesCollection.cs" />
+    <Compile Include="Charts\Core\SeriesOrientation.cs" />
+    <Compile Include="Charts\Core\StackMode.cs" />
+    <Compile Include="Charts\Core\TooltipSelectionMode.cs" />
+    <Compile Include="Charts\Core\UpdaterState.cs" />
+    <Compile Include="Charts\Core\VisualElementsCollection.cs" />
+    <Compile Include="Charts\Core\WindowAxisCore.cs" />
+    <Compile Include="Charts\Core\ZoomingOptions.cs" />
+    <Compile Include="Charts\DateAxis.cs" />
+    <Compile Include="Charts\DefaultAxes.cs" />
+    <Compile Include="Charts\DefaultGeoMapTooltip.xaml.cs" />
+    <Compile Include="Charts\DefaultGeometry.cs" />
+    <Compile Include="Charts\DefaultLegend.xaml.cs" />
+    <Compile Include="Charts\DefaultTooltip.xaml.cs" />
+    <Compile Include="Charts\Extentions.cs" />
+    <Compile Include="Charts\FinancialColoringRule.cs" />
+    <Compile Include="Charts\Gauge.cs" />
+    <Compile Include="Charts\GeoMap.cs" />
+    <Compile Include="Charts\HeatColorRange.xaml.cs" />
+    <Compile Include="Charts\HeatSeries.cs" />
+    <Compile Include="Charts\IChartLegend.cs" />
+    <Compile Include="Charts\IChartTooltip.cs" />
+    <Compile Include="Charts\LineSegmentSplitter.cs" />
+    <Compile Include="Charts\LineSeries.cs" />
+    <Compile Include="Charts\LogarithmicAxis.cs" />
+    <Compile Include="Charts\Maps\MapResolver.cs" />
+    <Compile Include="Charts\OhlcSeries.cs" />
+    <Compile Include="Charts\PieChart.cs" />
+    <Compile Include="Charts\PieSeries.cs" />
+    <Compile Include="Charts\Points\CandlePointView.cs" />
+    <Compile Include="Charts\Points\ColumnPointView.cs" />
+    <Compile Include="Charts\Points\HeatPoint.cs" />
+    <Compile Include="Charts\Points\HorizontalBezierPointView.cs" />
+    <Compile Include="Charts\Points\OhlcPointView.cs" />
+    <Compile Include="Charts\Points\PiePointView.cs" />
+    <Compile Include="Charts\Points\PieSlice.cs" />
+    <Compile Include="Charts\Points\PointView.cs" />
+    <Compile Include="Charts\Points\RowPointView.cs" />
+    <Compile Include="Charts\Points\ScatterPointView.cs" />
+    <Compile Include="Charts\Points\StepLinePointView.cs" />
+    <Compile Include="Charts\Points\VerticalBezierPointView.cs" />
+    <Compile Include="Charts\RowSeries.cs" />
+    <Compile Include="Charts\ScatterSeries.cs" />
+    <Compile Include="Charts\SectionsCollection.cs" />
+    <Compile Include="Charts\Separator.cs" />
+    <Compile Include="Charts\Series.cs" />
+    <Compile Include="Charts\StackedAreaSeries.cs" />
+    <Compile Include="Charts\StackedColumnSeries.cs" />
+    <Compile Include="Charts\StackedRowSeries.cs" />
+    <Compile Include="Charts\StepLineSeries.cs" />
+    <Compile Include="Charts\VerticalLineSeries.cs" />
+    <Compile Include="Charts\VerticalStackedAreaSeries.cs" />
+    <Compile Include="Charts\VisualElement.cs" />
+    <Compile Include="Charts\WindowAxis.cs" />
+    <Compile Include="Demo\Buttons.xaml.cs">
+      <DependentUpon>Buttons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transitions\CircleWipe.cs" />
+    <Compile Include="Transitions\FadeWipe.cs" />
+    <Compile Include="Transitions\IndexedItemOffsetMultiplierExtension.cs" />
+    <Compile Include="Transitions\ITransitionEffect.cs" />
+    <Compile Include="Transitions\ITransitionEffectSubject.cs" />
+    <Compile Include="Transitions\ITransitionWipe.cs" />
+    <Compile Include="Transitions\IZIndexController.cs" />
+    <Compile Include="Transitions\SlideDirection.cs" />
+    <Compile Include="Transitions\SlideOutWipe.cs" />
+    <Compile Include="Transitions\SlideWipe.cs" />
+    <Compile Include="Transitions\TransitionAssist.cs" />
+    <Compile Include="Transitions\TransitionEffect.cs" />
+    <Compile Include="Transitions\TransitionEffectBase.cs" />
+    <Compile Include="Transitions\TransitionEffectExtension.cs" />
+    <Compile Include="Transitions\TransitionEffectKind.cs" />
+    <Compile Include="Transitions\TransitionEffectTypeConverter.cs" />
+    <Compile Include="Transitions\Transitioner.cs" />
+    <Compile Include="Transitions\TransitionerSlide.cs" />
+    <Compile Include="Transitions\TransitionerSlideState.cs" />
+    <Compile Include="Transitions\TransitioningContent.cs" />
+    <Compile Include="Transitions\TransitioningContentBase.cs" />
+    <Page Include="Charts\DefaultGeoMapTooltip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Charts\DefaultLegend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Charts\DefaultTooltip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Charts\HeatColorRange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Colors-Soft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\Buttons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Badged.cs" />
+    <Compile Include="Controls\BaseTheme.cs" />
+    <Compile Include="Controls\ButtonProgressAssist.cs" />
+    <Compile Include="Controls\Card.cs" />
+    <Compile Include="Controls\Chip.cs" />
+    <Compile Include="Controls\Clock.cs" />
+    <Compile Include="Controls\ClockChoiceMadeEventArgs.cs" />
+    <Compile Include="Controls\ClockItemButton.cs" />
+    <Compile Include="Controls\ColorZone.cs" />
+    <Compile Include="Controls\ColorZoneAssist.cs" />
+    <Compile Include="Controls\ComboBoxAssist.cs" />
+    <Compile Include="Controls\ComboBoxPopup.cs" />
+    <Compile Include="Controls\CustomPopupPlacementCallbackHelper.cs" />
+    <Compile Include="Controls\DataGridAssist.cs" />
+    <Compile Include="Controls\DateTimeEx.cs" />
+    <Compile Include="Controls\DialogClosingEventArgs.cs" />
+    <Compile Include="Controls\DialogClosingEventHandler.cs" />
+    <Compile Include="Controls\DialogHost.cs" />
+    <Compile Include="Controls\DialogHostEx.cs" />
+    <Compile Include="Controls\DialogOpenedEventArgs.cs" />
+    <Compile Include="Controls\DialogOpenedEventHandler.cs" />
+    <Compile Include="Controls\DialogSession.cs" />
+    <Compile Include="Controls\DpiHelper.cs" />
+    <Compile Include="Controls\DrawerHost.cs" />
+    <Compile Include="Controls\ExpanderAssist.cs" />
+    <Compile Include="Controls\Extensions.cs" />
+    <Compile Include="Controls\Flipper.cs" />
+    <Compile Include="Controls\HintAssist.cs" />
+    <Compile Include="Controls\HintProxyFabric.ComboBox.cs" />
+    <Compile Include="Controls\HintProxyFabric.cs" />
+    <Compile Include="Controls\HintProxyFabric.PasswordBox.cs" />
+    <Compile Include="Controls\HintProxyFabric.TextBox.cs" />
+    <Compile Include="Controls\Icon.cs" />
+    <Compile Include="Controls\IconType.cs" />
+    <Compile Include="Controls\IHintProxy.cs" />
+    <Compile Include="Controls\ISnackbarMessageQueue.cs" />
+    <Compile Include="Controls\ListBoxAssist.cs" />
+    <Compile Include="Controls\ListSortDirectionIndicator.cs" />
+    <Compile Include="Controls\ListViewAssist.cs" />
+    <Compile Include="Controls\MaterialDataGridComboBoxColumn.cs" />
+    <Compile Include="Controls\MaterialDataGridTextColumn.cs" />
+    <Compile Include="Controls\MaterialDateDisplay.cs" />
+    <Compile Include="Controls\MessageQueueExtension.cs" />
+    <Compile Include="Controls\PackIcon.cs" />
+    <Compile Include="Controls\PackIconDataFactory.cs" />
+    <Compile Include="Controls\PackIconExtension.cs" />
+    <Compile Include="Controls\PackIconKind.cs" />
+    <Compile Include="Controls\Plane3D.cs" />
+    <Compile Include="Controls\PopupBox.cs" />
+    <Compile Include="Controls\RatingBar.cs" />
+    <Compile Include="Controls\RatingBarButton.cs" />
+    <Compile Include="Controls\Ripple.cs" />
+    <Compile Include="Controls\RippleAssist.cs" />
+    <Compile Include="Controls\ScaleHost.cs" />
+    <Compile Include="Controls\Screen.cs" />
+    <Compile Include="Controls\ScrollViewerAssist.cs" />
+    <Compile Include="Controls\ShadowAssist.cs" />
+    <Compile Include="Controls\SmartHint.cs" />
+    <Compile Include="Controls\Snackbar.cs" />
+    <Compile Include="Controls\SnackbarMessage.cs" />
+    <Compile Include="Controls\SnackbarMessageEventArgs.cs" />
+    <Compile Include="Controls\SnackbarMessageQueue.cs" />
+    <Compile Include="Controls\SnackbarMessageQueueItem.cs" />
+    <Compile Include="Controls\Spelling.cs" />
+    <Compile Include="Controls\StringExtensions.cs" />
+    <Compile Include="Controls\TextFieldAssist.cs" />
+    <Compile Include="Controls\ThemeAssist.cs" />
+    <Compile Include="Controls\TimePicker.cs" />
+    <Compile Include="Controls\ToggleButtonAssist.cs" />
+    <Compile Include="Controls\ToolTipAssist.cs" />
+    <Compile Include="Controls\TreeHelper.cs" />
+    <Compile Include="Controls\TreeViewAssist.cs" />
+    <Compile Include="Controls\Underline.cs" />
+    <Compile Include="Controls\ValidationAssist.cs" />
+    <Compile Include="ControlzEx\BadgedEx.cs" />
+    <Compile Include="ControlzEx\PackIconBase.cs" />
+    <Compile Include="ControlzEx\PopupEx.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\BrushRoundConverter.cs" />
+    <Compile Include="Converters\BrushToRadialGradientBrushConverter.cs" />
+    <Compile Include="Converters\CalendarDateCoalesceConverter.cs" />
+    <Compile Include="Converters\CircularProgressBar\ArcEndPointConverter.cs" />
+    <Compile Include="Converters\CircularProgressBar\ArcSizeConverter.cs" />
+    <Compile Include="Converters\CircularProgressBar\LargeArcConverter.cs" />
+    <Compile Include="Converters\CircularProgressBar\LocalEx.cs" />
+    <Compile Include="Converters\CircularProgressBar\RotateTransformCentreConverter.cs" />
+    <Compile Include="Converters\CircularProgressBar\StartPointConverter.cs" />
+    <Compile Include="Converters\ClockItemIsCheckedConverter.cs" />
+    <Compile Include="Converters\ClockLineConverter.cs" />
+    <Compile Include="Converters\DrawerOffsetConverter.cs" />
+    <Compile Include="Converters\EqualityToVisibilityConverter.cs" />
+    <Compile Include="Converters\HintProxyFabricConverter.cs" />
+    <Compile Include="Converters\ListViewItemContainerStyleConverter.cs" />
+    <Compile Include="Converters\MathConverter.cs" />
+    <Compile Include="Converters\MathMultipleConverter.cs" />
+    <Compile Include="Converters\NotConverter.cs" />
+    <Compile Include="Converters\NotZeroConverter.cs" />
+    <Compile Include="Converters\NotZeroToVisibilityConverter.cs" />
+    <Compile Include="Converters\NullableDateTimeToCurrentDateConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Converters\PointValueConverter.cs" />
+    <Compile Include="Converters\RangeLengthConverter.cs" />
+    <Compile Include="Converters\RangePositionConverterConverter.cs" />
+    <Compile Include="Converters\ShadowConverter.cs" />
+    <Compile Include="Converters\ShadowEdgeConverter.cs" />
+    <Compile Include="Converters\ShadowInfo.cs" />
+    <Compile Include="Converters\SizeToRectConverter.cs" />
+    <Compile Include="Converters\SnackbarMessageTypeConverter.cs" />
+    <Compile Include="Converters\TextFieldHintVisibilityConverter.cs" />
+    <Compile Include="Converters\TimeToVisibilityConverter.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Colors\Blue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Colors\Gradients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Colors\Purple.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Colors\Yellow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Badged.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Calendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Card.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Chip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Clock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmenComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Defaults.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.DialogHost.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Expander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Flipper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Font.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.GridSplitter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Hyperlink.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.PasswordBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.PopupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.RatingBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Shadows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.SmartHint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Snackbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.Thumb.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.TimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ToolBarTray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ToolTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BinaryOmen.ValidationErrorTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resourses\Roboto\Roboto-Black.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-BlackItalic.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-Bold.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-BoldItalic.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-Italic.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-Light.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-LightItalic.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-Medium.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-MediumItalic.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-Regular.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-Thin.ttf" />
+    <Resource Include="Resourses\Roboto\Roboto-ThinItalic.ttf" />
+    <Resource Include="Resourses\Roboto\RobotoCondensed-Bold.ttf" />
+    <Resource Include="Resourses\Roboto\RobotoCondensed-BoldItalic.ttf" />
+    <Resource Include="Resourses\Roboto\RobotoCondensed-Italic.ttf" />
+    <Resource Include="Resourses\Roboto\RobotoCondensed-Light.ttf" />
+    <Resource Include="Resourses\Roboto\RobotoCondensed-LightItalic.ttf" />
+    <Resource Include="Resourses\Roboto\RobotoCondensed-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vrika-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Charts\docs.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

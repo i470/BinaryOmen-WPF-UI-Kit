@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BinaryOmen.Vrika">
+
+   <Color x:Key="YellowColor">#FFFACB6E</Color>
+    <Color x:Key="PinkColor">#FFFC77B5</Color>
+    <Color x:Key="PurpleColor">#FFBD8CFA</Color>
+    <Color x:Key="GreenColor">#FF0DDB97</Color>
+    <Color x:Key="BlueColor">#FF30D9E6</Color>
+    <Color x:Key="Base100Color">#FF1B2136</Color>
+    <Color x:Key="Base200Color">#FF1E253B</Color>
+    <Color x:Key="Base300Color">#FF252C45</Color> 
+
+   
+    
+    
+    <SolidColorBrush x:Key="Base100" Color="{StaticResource Base100Color}"/>
+    <SolidColorBrush x:Key="Base200" Color="{StaticResource Base200Color}"/>
+    <SolidColorBrush x:Key="Base300" Color="{StaticResource Base300Color}"/>
+    
+    
+   
+    <SolidColorBrush x:Key="Pink" Color="{DynamicResource PinkColor}"/>
+
+    
+    <SolidColorBrush x:Key="Yellow" Color="{StaticResource YellowColor}"/>
+
+    
+    <SolidColorBrush x:Key="Purple" Color="{StaticResource PurpleColor}"/>
+
+    
+    <SolidColorBrush x:Key="Green" Color="{StaticResource GreenColor}"/>
+
+    
+    <SolidColorBrush x:Key="Blue" Color="{StaticResource BlueColor}"/>
+   
+
+    <LinearGradientBrush x:Key="PinkGradient" EndPoint="0.953,0.081" StartPoint="0.239,0.836">
+        <GradientStop Offset="0.793" Color="{StaticResource YellowColor}"/>
+        <GradientStop Color="{StaticResource PinkColor}"/>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="PurpleGradient" EndPoint="1.125,-0.184" StartPoint="0.224,0.859">
+        <GradientStop Color="{StaticResource BlueColor}" Offset="0.793"/>
+        <GradientStop Color="{StaticResource PurpleColor}" Offset="0.203"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PurplePinkGradient" EndPoint="1.125,-0.184" StartPoint="0.224,0.859">
+        <GradientStop Color="{StaticResource PinkColor}" Offset="0.793"/>
+        <GradientStop Color="{StaticResource PurpleColor}" Offset="0.203"/>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="GreenGradient" EndPoint="1.125,-0.184" StartPoint="0.224,0.859">
+        <GradientStop Color="{StaticResource BlueColor}" Offset="0.793"/>
+        <GradientStop Color="{StaticResource GreenColor}" Offset="0.203"/>
+    </LinearGradientBrush>
+
+
+</ResourceDictionary>

@@ -1,0 +1,94 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- use this resource dictionary to set up the most common themese for standard controls -->
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Calendar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.CheckBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ComboBox.xaml" />
+        <!--<ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.DataGrid.xaml" />-->
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.DatePicker.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.DialogHost.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Expander.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Font.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.GridSplitter.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.GroupBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Hyperlink.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Label.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Listbox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ListView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Menu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.PasswordBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ProgressBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.RadioButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ScrollBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ScrollViewer.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Shadows.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Slider.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.TextBlock.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.TimePicker.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ToggleButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ToolBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ToolBarTray.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ToolTip.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.TreeView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Thumb.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ValidationErrorTemplate.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="LightBackground" Color="#FFFAFAFA"/>
+    <SolidColorBrush x:Key="LightForeground" Color="#DD000000"/>
+    <SolidColorBrush x:Key="DarkBackground" Color="#FF303030"/>
+    <SolidColorBrush x:Key="DarkForeground" Color="#FFFAFAFA"/>
+    <SolidColorBrush x:Key="DarkSeparatorBackground" Color="#1F000000" />
+    <SolidColorBrush x:Key="LightSeparatorBackground" Color="#1FFFFFFF" />
+    
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource RaisedButton}" />
+    <Style TargetType="{x:Type Calendar}" BasedOn="{StaticResource CalendarPortrait}" />
+    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource CheckBox}" />
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource ComboBox}" />
+    <Style TargetType="{x:Type ContextMenu}" BasedOn="{StaticResource ContextMenu}" />
+    <Style TargetType="{x:Type Thumb}" BasedOn="{StaticResource Thumb}" />
+    <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource DataGrid}" />
+    <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCell}" />
+    <Style TargetType="{x:Type DataGridColumnHeader}" BasedOn="{StaticResource DataGridColumnHeader}" />
+    <Style TargetType="{x:Type DataGridRow}" BasedOn="{StaticResource DataGridRow}" />
+    <Style TargetType="{x:Type DataGridRowHeader}" BasedOn="{StaticResource DataGridRowHeader}" />
+    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource DatePicker}" />
+    <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander}" />
+    <Style TargetType="{x:Type GridSplitter}" BasedOn="{StaticResource GridSplitter}" />
+    <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource GroupBox}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource Label}" />
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBox}" />
+    <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListBoxItem}" />
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource PasswordBox}" />
+    <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource LinearProgressBar}" />
+    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButton}" />
+    <Style TargetType="{x:Type RepeatButton}" BasedOn="{StaticResource RaisedButton}" />
+    <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource ScrollBar}" />
+    <Style TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource ScrollViewer}" />
+    <Style TargetType="{x:Type Slider}" BasedOn="{StaticResource Slider}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBox}" />
+    <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource SwitchToggleButton}" />
+    <Style TargetType="{x:Type ToolBar}" BasedOn="{StaticResource ToolBar}" />
+    <Style TargetType="{x:Type ToolBarTray}" BasedOn="{StaticResource ToolBarTray}" />
+    <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource ToolTip}" />
+    <Style TargetType="{x:Type TreeView}" BasedOn="{StaticResource TreeView}" />
+    <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource TreeViewItem}" />
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource ListView}" />
+    <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource ListBoxItem}" />
+    <Style TargetType="{x:Type Menu}" BasedOn="{StaticResource Menu}" />
+    <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource MenuItem}" />
+    
+    <Style x:Key="{x:Static MenuItem.SeparatorStyleKey}" TargetType="{x:Type Separator}" BasedOn="{StaticResource Separator}" />
+    <Style x:Key="DarkSeparator" TargetType="{x:Type Separator}" BasedOn="{StaticResource Separator}">
+        <Setter Property="Background" Value="{DynamicResource DarkSeparatorBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource DarkSeparatorBackground}"/>
+    </Style>
+    <Style x:Key="LightSeparator" TargetType="{x:Type Separator}" BasedOn="{StaticResource Separator}">
+        <Setter Property="Background" Value="{DynamicResource LightSeparatorBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource LightSeparatorBackground}"/>
+    </Style>
+</ResourceDictionary>

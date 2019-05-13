@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type Hyperlink}" x:Key="Body1Hyperlink">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="FontWeight" Value="Regular"/>
+        <Setter Property="TextDecorations" Value="None" />
+        <Setter Property="Foreground" Value="{DynamicResource Body}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource CheckBoxDisabled}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsEnabled" Value="True" />
+                    <Condition Property="IsMouseOver" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter Property="TextDecorations" Value="Underline" />
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="CaptionHyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="Body2Hyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontWeight" Value="Medium"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="SubheadingHyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="TitleHyperlink"
+        BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="HeadlineHyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="Display1Hyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="34"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="Display2Hyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="45"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="Display3Hyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="56"/>
+    </Style>
+    <Style TargetType="{x:Type Hyperlink}" x:Key="Display4Hyperlink"
+           BasedOn="{StaticResource Body1Hyperlink}">
+        <Setter Property="FontSize" Value="112"/>
+        <Setter Property="FontWeight" Value="Light"/>
+    </Style>
+</ResourceDictionary>

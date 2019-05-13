@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <Color x:Key="ValidationErrorColor">#f44336</Color>
+    <SolidColorBrush x:Key="ValidationErrorBrush" Color="{StaticResource ValidationErrorColor}" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="Background" Color="#FFFFFFFF" po:Freeze="True" />
+    <SolidColorBrush x:Key="Paper" Color="#FFfafafa" po:Freeze="True" />
+    <SolidColorBrush x:Key="CardBackground" Color="#FFFFFFFF" po:Freeze="True" />
+    <SolidColorBrush x:Key="ToolBarBackground" Color="#FFF5F5F5" po:Freeze="True" />
+    <SolidColorBrush x:Key="Body" Color="#DD000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="BodyLight" Color="#89000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="ColumnHeader" Color="#BC000000" po:Freeze="True" /> <!-- 74% -->
+
+    <SolidColorBrush x:Key="CheckBoxOff" Color="#89000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="CheckBoxDisabled" Color="#FFBDBDBD" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="TextBoxBorder" Color="#89000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="Divider" Color="#1F000000" po:Freeze="True" /> <!-- 12% -->
+    <SolidColorBrush x:Key="Selection" Color="#FFDeDeDe" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="ToolForeground" Color="#616161" po:Freeze="true" />
+    <SolidColorBrush x:Key="ToolBackground" Color="#e0e0e0" po:Freeze="true" />
+
+    <SolidColorBrush x:Key="ButtonClick" Color="#FFDeDeDe" po:Freeze="True" />
+    <SolidColorBrush x:Key="FlatButtonRipple" Color="#FFB6B6B6" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="ToolTipBackground" Color="#757575" po:Freeze="True" />
+    <SolidColorBrush x:Key="ChipBackground" Color="#12000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="SnackbarBackground" Color="#FF323232" po:Freeze="True" />
+    <SolidColorBrush x:Key="SnackbarMouseOver" Color="#FF464642" po:Freeze="True" />
+    <SolidColorBrush x:Key="SnackbarRipple" Color="#FFB6B6B6" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="TextFieldBoxBackground" Color="#0F000000" po:Freeze="True" /> <!-- 6% black -->
+    <SolidColorBrush x:Key="TextFieldBoxHoverBackground" Color="#14000000" po:Freeze="True" /> <!-- 8% black -->
+    <SolidColorBrush x:Key="TextFieldBoxDisabledBackground" Color="#08000000" po:Freeze="True" /> <!-- 3% black -->
+    <SolidColorBrush x:Key="TextAreaBorder" Color="#BC000000" po:Freeze="True" /> <!-- 74% black -->
+    <SolidColorBrush x:Key="TextAreaInactiveBorder" Color="#0F000000" po:Freeze="True" /> <!-- 6% black -->
+</ResourceDictionary>

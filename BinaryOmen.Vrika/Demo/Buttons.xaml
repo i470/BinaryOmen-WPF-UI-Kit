@@ -1,0 +1,647 @@
+﻿<Window x:Class="BinaryOmen.Vrika.Demo.Buttons"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BinaryOmen.Vrika.Demo"
+        xmlns:wpf="clr-namespace:BinaryOmen.Vrika.Wpf"
+        xmlns:converters="clr-namespace:BinaryOmen.Vrika.Wpf.Converters"
+        mc:Ignorable="d"
+        Title="Buttons" Height="1400" Width="1200" Foreground="White" Background="{StaticResource Base200}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ListBox.xaml" />
+                <!--<ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.PopupBox.xaml" />-->
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <converters:BooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" TrueValue="Collapsed" FalseValue="Visible" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid VerticalAlignment="Top" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource HeadlineTextBlock}">BinaryOmen WPF UI Tool Kit: Buttons</TextBlock>
+        <Grid Grid.Row="1" >
+            <StackPanel Orientation="Horizontal" Margin="0 12 0 0">
+                <Border Margin="8 0">
+                    <Button Style="{StaticResource FloatingActionMiniLightButton}"
+                            ToolTip="wpfFloatingActionMiniLightButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionMiniButton}"
+                            HorizontalAlignment="Left"
+                            ToolTip="wpfFloatingActionMiniButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionMiniDarkButton}"
+                            ToolTip="wpfFloatingActionMiniDarkButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionMiniAccentButton}"
+                            ToolTip="wpfFloatingActionMiniAccentButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionLightButton}"
+                            ToolTip="wpfFloatingActionLightButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionButton}"
+                            ToolTip="wpfFloatingActionButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionDarkButton}"
+                            ToolTip="wpfFloatingActionDarkButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource FloatingActionAccentButton}"
+                            ToolTip="wpfFloatingActionAccentButton">
+                        <wpf:PackIcon Kind="Alarm" Height="24" Width="24" />
+                    </Button>
+                </Border>
+                <Border >
+                    <!--<wpf:PopupBox Style="{StaticResource MultiFloatingActionPopupBox}"
+                                             PlacementMode="BottomAndAlignCentres"
+                                             ToolTipService.Placement="Right"
+                                             ToolTip="PopupBox, Style wpfMultiFloatingActionPopupBox"
+                                             
+                                             >
+                        <StackPanel>
+                            <Button ToolTip="One with custom opacity" Opacity="0.5">1</Button>
+                            <Button ToolTip="Two">2</Button>
+                            <Button ToolTip="Three">3</Button>
+                        </StackPanel>
+                    </wpf:PopupBox>-->
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Border >
+                    <!--<StackPanel Orientation="Horizontal">
+                        <CheckBox Name="PopupEnabled">Enable Popup</CheckBox>
+                        <wpf:PopupBox Margin="16,0,16,0" StaysOpen="True" IsEnabled="{Binding IsChecked, ElementName=PopupEnabled}">
+                            <Grid Width="300" Margin="8,8,8,8">
+                                <Grid.Resources>
+                                    <Style TargetType="CheckBox" BasedOn="{StaticResource CheckBox}">
+                                        <Setter Property="Margin" Value="8,8,10,8"/>
+                                    </Style>
+                                    <Style TargetType="TextBox" BasedOn="{StaticResource TextBox}">
+                                        <Setter Property="wpf:HintAssist.IsFloating" Value="True"/>
+                                        <Setter Property="Margin" Value="8,8,8,8"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource TitleTextBlock}" Margin="8,8,8,16">OPTIONS</TextBlock>
+                                <TextBox Grid.Column="0" Grid.Row="1" wpf:HintAssist.Hint="Setting 1" Text="200"/>
+                                <TextBox Grid.Column="0" Grid.Row="2" wpf:HintAssist.Hint="Setting 2" Text="400"/>
+                                <TextBox Grid.Column="0" Grid.Row="3" wpf:HintAssist.Hint="Setting 3" Text="600"/>
+                                <CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" />
+                                <CheckBox Grid.Column="1" Grid.Row="2" IsChecked="True" VerticalAlignment="Bottom" />
+                                <CheckBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" />
+                                <ComboBox Grid.Column="0" Grid.Row="4" wpf:HintAssist.Hint="Setting 4" wpf:HintAssist.IsFloating="True"
+                                  MaxDropDownHeight="200"
+                                  Margin="8 8 8 8">
+                                    <ComboBoxItem>25%</ComboBoxItem>
+                                    <ComboBoxItem>50%</ComboBoxItem>
+                                    <ComboBoxItem>75%</ComboBoxItem>
+                                    <ComboBoxItem>100%</ComboBoxItem>
+                                    <ComboBoxItem>150%</ComboBoxItem>
+                                    <ComboBoxItem>200%</ComboBoxItem>
+                                    <ComboBoxItem>250%</ComboBoxItem>
+                                    <ComboBoxItem>501%</ComboBoxItem>
+                                </ComboBox>
+
+                                <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Button Content="_Save" Command="{x:Static wpf:PopupBox.ClosePopupCommand}" />
+                                    <Button Content="_Cancel" Command="{x:Static wpf:PopupBox.ClosePopupCommand}">
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{StaticResource PopupBoxButton}">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+
+                        </wpf:PopupBox>
+                    </StackPanel>-->
+                </Border>
+                <Border Margin="0 0 48 0">
+                    <!--<wpf:PopupBox Style="{StaticResource MultiFloatingActionAccentPopupBox}"
+                                            PlacementMode="BottomAndAlignCentres"
+                                             
+                                            ToolTip="PopupBox, Style wpfMultiFloatingActionAccentPopupBox">
+                        <wpf:PopupBox.ToggleCheckedContent>
+                            <wpf:PackIcon Kind="Pencil" Width="24" Height="24" />
+                        </wpf:PopupBox.ToggleCheckedContent>
+                        <StackPanel>
+                            <Button ToolTip="One">1</Button>
+                            <Button ToolTip="Two" IsEnabled="False">2</Button>
+                            <Button ToolTip="Three">3</Button>
+                        </StackPanel>
+                    </wpf:PopupBox>-->
+                </Border>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 20 0 0">
+            <Border  Margin="5 12 4 5">
+                <Button Style="{StaticResource RaisedLightButton}" Width="100"
+                        ToolTip="Resource name: wpfRaisedLightButton">
+                    _LIGHT
+                </Button>
+            </Border>
+            <Border  Margin="0 12 4 5">
+                <Button Style="{StaticResource RaisedButton}" Width="100"
+                        ToolTip="Resource name: wpfRaisedButton">
+                    _MID
+                </Button>
+            </Border>
+            <Border Margin="0 12 4 5">
+                <Button Style="{StaticResource RaisedDarkButton}" Width="100"
+                        ToolTip="Resource name: wpfRaisedLightDarkButton">
+                    _DARK
+                </Button>
+            </Border>
+            <Border  Margin="0 12 8 5">
+                <Button Style="{StaticResource RaisedAccentButton}" Width="100"
+                        ToolTip="Resource name: wpfRaisedAccentButton">
+                    ACCENT
+                </Button>
+            </Border>
+            <Border Margin="0 12 8 5">
+                <wpf:Badged Badge="3">
+                    <Button>MAIL</Button>
+                </wpf:Badged>
+            </Border>
+
+            <Border Margin="0 12 8 5">
+                <wpf:Badged Badge="{wpf:PackIcon Heart}"
+                                       BadgeColorZoneMode="Accent">
+                    <Button>LOVE</Button>
+                </wpf:Badged>
+            </Border>
+
+            <Border  Margin="0 12 14 5">
+                <wpf:Badged Badge="DANGER" BadgeColorZoneMode="Dark">
+                    <Button>STATUS</Button>
+                </wpf:Badged>
+            </Border>
+            <Border Margin="0 12 14 5">
+                <wpf:Badged x:Name="CountingBadge" BadgeColorZoneMode="PrimaryDark">
+                    <Button Style="{StaticResource RaisedLightButton}"
+                           >CLICK ME!</Button>
+                </wpf:Badged>
+            </Border>
+            <Border  Margin="5 12 4 5">
+                <Button Style="{StaticResource RaisedLightButton}" Width="150"
+                        ToolTip="Resource name: wpfRaisedLightButton"
+                        Content="{Binding OrClickMeCount}"
+                        ContentStringFormat="OR CLICK ME {0}"
+                        Command="{Binding IncrementOrClickMeCountCommand }"
+                        />
+            </Border>
+
+            <Border  Margin="0 12 4 5">
+                <Button Content="{wpf:PackIcon AirplaneTakeoff}" ToolTip="Icon" />
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <StackPanel Orientation="Horizontal" Margin="0 24 0 0">
+                <Border  Margin="5 0 8 0">
+                    <Button Style="{StaticResource RaisedAccentButton}"
+                            Width="150"
+                            ToolTip="Resource name: wpfRaisedAccentButton"
+                            wpf:RippleAssist.Feedback="#DD000000">CUSTOM RIPPLE</Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <Button Style="{StaticResource RaisedAccentButton}"
+                            Width="150"
+                            ToolTip="Resource name: wpfRaisedAccentButton"
+                            wpf:RippleAssist.IsDisabled="True">NO RIPPLE</Button>
+                </Border>
+                <Border  Margin="0 0 8 0">
+                    <RepeatButton  Width="100" ToolTip="Resource name: wpfRaisedButton">
+                        REPEAT
+                    </RepeatButton>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 24 0 0">
+                <Border >
+                    <Button Style="{StaticResource FlatButton}" Margin="5" ToolTip="wpfFlatButton">ACCEPT</Button>
+                </Border>
+                <Border >
+                    <Button Style="{StaticResource FlatButton}" Margin="5"  ToolTip="wpfFlatButton">CANCEL</Button>
+                </Border>
+                <Border >
+                    <Button Style="{StaticResource FlatLightBgButton}" Margin="5"  ToolTip="wpfFlatLightButton">Okay</Button>
+                </Border>
+                <Border >
+                    <Button Style="{StaticResource FlatMidBgButton}" Margin="5"  ToolTip="wpfFlatMidButton">Okay</Button>
+                </Border>
+                <Border >
+                    <Button Style="{StaticResource FlatDarkBgButton}" Margin="5" ToolTip="wpfFlatDarkButton">Okay</Button>
+                </Border>
+                <Border >
+                    <Button Style="{StaticResource FlatAccentBgButton}" Margin="5"  ToolTip="wpfFlatAccentBackgroundButton">Okay</Button>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+        <Border Margin="0 16 0 0" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource Divider}" Grid.Row="4" />
+
+        <TextBlock Style="{StaticResource HeadlineTextBlock}"
+                   Grid.Row="5" Margin="0 12 0 12">Buttons - With Progress</TextBlock>
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <Border  Margin="5 0 0 0">
+                <Grid Width="124">
+                    <!-- raised button with progress, useful to auto dismiss/accept something -->
+                    <Button Command="{Binding DismissCommand}"
+                            Style="{StaticResource RaisedButton}"
+                            HorizontalAlignment="Left"
+                            wpf:ButtonProgressAssist.Value="{Binding DismissButtonProgress}"
+                            wpf:ButtonProgressAssist.IsIndicatorVisible="True"
+                            Visibility="{Binding ShowDismissButton, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>DISMISS</TextBlock>
+                            <wpf:PackIcon Margin="4 .5 0 0" Kind="Close" />
+                        </StackPanel>
+                    </Button>
+                    <TextBlock Text="{Binding DemoRestartCountdownText}"
+                               VerticalAlignment="Center"
+                               Visibility="{Binding ShowDismissButton, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+                               />
+                </Grid>
+            </Border>
+
+            <Border  Margin="5 0 0 0">
+                <Grid Width="124">
+                    <Button Style="{StaticResource RaisedButton}"
+                            wpf:ButtonProgressAssist.Value="-1"
+                            wpf:ButtonProgressAssist.IsIndicatorVisible="True"
+                            wpf:ButtonProgressAssist.IsIndeterminate="True"
+                            Content="Indeterminate" Margin="2,0"/>
+                </Grid>
+            </Border>
+            <Border >
+                <StackPanel Orientation="Horizontal" >
+                    <!-- floating action button with progress -->
+                    <TextBlock Margin="24 0 0 0" VerticalAlignment="Center">Click Me:</TextBlock>
+                    <Button Style="{StaticResource FloatingActionLightButton}" Margin="8 0 0 0"
+                            Command="{Binding SaveCommand}"
+                            wpf:ButtonProgressAssist.IsIndicatorVisible="{Binding IsSaving}"
+                            wpf:ButtonProgressAssist.Value="{Binding SaveProgress}">
+                        <!-- simple example of toggling/animating pack icon with a data trigger-->
+                        <wpf:PackIcon Height="24" Width="24">
+                            <wpf:PackIcon.Style>
+                                <Style TargetType="wpf:PackIcon" BasedOn="{StaticResource {x:Type wpf:PackIcon}}">
+                                    <Setter Property="Kind" Value="CloudSync" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSaveComplete}" Value="True">
+                                            <Setter Property="Kind" Value="Check" />
+                                            <DataTrigger.EnterActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.8" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.EnterActions>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </wpf:PackIcon.Style>
+                        </wpf:PackIcon>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <TextBlock Margin="24 0 0 0" VerticalAlignment="Center">Variations:</TextBlock>
+            <Border  Margin="16 0 0 0">
+                <Button Style="{StaticResource FloatingActionButton}"
+                        wpf:ButtonProgressAssist.IsIndicatorVisible="True"
+                        wpf:ButtonProgressAssist.Value="-1" 
+                        wpf:ButtonProgressAssist.IsIndeterminate="True"
+                        Content="{wpf:PackIcon DotsHorizontal}" />
+            </Border>
+            <Border  Margin="16 0 0 0">
+                <Button Style="{StaticResource FloatingActionAccentButton}"
+                        wpf:ButtonProgressAssist.IsIndicatorVisible="True"
+                        wpf:ButtonProgressAssist.Value="50" 
+                        Content="{wpf:PackIcon DotsHorizontal}" />
+            </Border>
+            <Border  Margin="16 0 0 0">
+                <Button Style="{StaticResource FloatingActionButton}"
+                        Background="#81d4fa"
+                        BorderBrush="#81d4fa"
+                        Foreground="#DD000000"
+                        wpf:ButtonProgressAssist.IsIndicatorVisible="True"
+                        wpf:ButtonProgressAssist.Value="25" 
+                        wpf:ButtonProgressAssist.IndicatorForeground="#e65100"
+                        wpf:ButtonProgressAssist.IndicatorBackground="#ffcc80"
+                        Content="{wpf:PackIcon DotsHorizontal}" />
+            </Border>
+            <Border  Margin="16 0 0 0">
+                <Button Style="{StaticResource FloatingActionMiniDarkButton}"
+                        wpf:ButtonProgressAssist.IsIndicatorVisible="True"
+                        wpf:ButtonProgressAssist.Value="75" 
+                        Content="{wpf:PackIcon DotsHorizontal}" />
+            </Border>
+        </StackPanel>
+        <Border Margin="0 16 0 0" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource Divider}" Grid.Row="7" />
+
+        <TextBlock Margin="0 32 0 24" Grid.Row="7" Style="{StaticResource HeadlineTextBlock}">Toggles</TextBlock>
+        <Grid Grid.Row="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <Border  Margin="5 5 8 8">
+                    <ToggleButton Content="C" Style="{StaticResource ActionLightToggleButton}" IsChecked="True"
+                                  ToolTip="wpfActionLightToggleButton"/>
+                </Border>
+                <Border  Margin="0 5 8 8">
+                    <ToggleButton Content="H" Style="{StaticResource ActionToggleButton}"
+                                  ToolTip="wpfActionToggleButton"
+                                  wpf:ShadowAssist.ShadowDepth="Depth3"/>
+                </Border>
+                <Border  Margin="0 5 8 8">
+                    <!-- checkbox style same as toggle button -->
+                    <CheckBox Content="E" Style="{StaticResource ActionDarkCheckBox}"
+                              ToolTip="wpfActionDarkCheckBox"/>
+                </Border>
+                <Border  Margin="0 5 8 8">
+                    <ToggleButton Content="C" Style="{StaticResource ActionAccentToggleButton}"
+                                  IsChecked="True"
+                                  ToolTip="wpfActionAccentToggleButton"/>
+                </Border>
+                <Border  Margin="0 5 8 8">
+                    <ToggleButton Content="K" Style="{StaticResource ActionToggleButton}" IsEnabled="False"
+                                  ToolTip="wpfActionToggleButton"/>
+                </Border>
+                <Border  Margin="0 5 8 8">
+                    <ToggleButton Style="{StaticResource ActionToggleButton}"
+                                  ToolTip="wpfActionToggleButton">
+                        <Image Source=""></Image>
+                    </ToggleButton>
+                </Border>
+                <TextBlock Margin="16 0 8 0" VerticalAlignment="Center">Customise On Content:</TextBlock>
+                <Border >
+                    <ToggleButton Style="{StaticResource ActionToggleButton}"
+                                  ToolTip="wpfActionLightToggleButton">
+                        <ToggleButton.Content>
+                            <wpf:PackIcon Kind="EmoticonSad" />
+                        </ToggleButton.Content>
+                        <wpf:ToggleButtonAssist.OnContent>
+                            <wpf:PackIcon Kind="EmoticonHappy" />
+                        </wpf:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="0 16 0 0" Orientation="Horizontal">
+                <Border  Margin="5 5 8 8" VerticalAlignment="Center">
+                    <RadioButton Style="{StaticResource RadioButton}" Tag="True">
+                        <RadioButton.IsChecked>
+                            <Binding Path="Tag" RelativeSource="{RelativeSource Self}">
+                                <Binding.ValidationRules>
+                                    <!--<domain:IsCheckedValidationRule />-->
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </RadioButton.IsChecked>
+                        Radio
+                    </RadioButton>
+                </Border>
+                <Border  Margin="0 5 8 8" VerticalAlignment="Center">
+                    <RadioButton Style="{StaticResource RadioButton}" >
+                        Ga Ga
+                    </RadioButton>
+                </Border>
+                <Border  Margin="0 5 8 8" VerticalAlignment="Center">
+                    <RadioButton Style="{StaticResource RadioButton}" IsEnabled="False">
+                        Disabled
+                    </RadioButton>
+                </Border>
+                <Border  Margin="0 5 8 8" VerticalAlignment="Center">
+                    <CheckBox Style="{StaticResource CheckBox}">
+                        Check
+                    </CheckBox>
+                </Border>
+                <Border Margin="0 5 8 8" VerticalAlignment="Center">
+                    <CheckBox Style="{StaticResource CheckBox}" Tag="True">
+                        <CheckBox.IsChecked>
+                            <Binding Path="Tag" RelativeSource="{RelativeSource Self}">
+                                <Binding.ValidationRules>
+                                    <!--<domain:IsCheckedValidationRule />-->
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </CheckBox.IsChecked>
+                        Mate
+                    </CheckBox>
+                </Border>
+                <Border  Margin="0 5 8 8" VerticalAlignment="Center">
+                    <CheckBox Style="{StaticResource CheckBox}" IsEnabled="False"  IsChecked="True">
+                        Disabled
+                    </CheckBox>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="2" Margin="0 16 0 0" Orientation="Horizontal">
+                <Border VerticalAlignment="Center" Margin="5 0 0 0">
+                    <ToggleButton Style="{StaticResource SwitchToggleButton}" ToolTip="Default ToggleButton Style"/>
+                </Border>
+                <Border  VerticalAlignment="Center" Margin="8 0 0 0">
+                    <ToggleButton Style="{StaticResource SwitchToggleButton}" IsEnabled="False" />
+                </Border>
+                <Border VerticalAlignment="Center" Margin="8 0 0 0">
+                    <ToggleButton Style="{StaticResource SwitchLightToggleButton}"
+                          ToolTip="wpfSwitchLightToggleButton" IsChecked="True" />
+                </Border>
+                <Border  VerticalAlignment="Center" Margin="8 0 0 0">
+                    <ToggleButton Style="{StaticResource SwitchToggleButton}" 
+                                  ToolTip="wpfSwitchToggleButton" IsChecked="True" />
+                </Border>
+                <Border  VerticalAlignment="Center" Margin="8 0 0 0">
+                    <ToggleButton Style="{StaticResource SwitchDarkToggleButton}"
+                                  ToolTip="wpfSwitchDarkToggleButton" IsChecked="True" />
+                </Border>
+                <Border  VerticalAlignment="Center" Margin="8 0 0 0">
+                    <ToggleButton Style="{StaticResource SwitchAccentToggleButton}" 
+                                  ToolTip="wpfSwitchAccentToggleButton" IsChecked="True" />
+                </Border>
+                <Border  VerticalAlignment="Center" Margin="8 0 0 0" >
+                    <ToggleButton Style="{StaticResource SwitchToggleButton}"
+                                  ToolTip="wpfSwitchToggleButton with Content and ToggleButtonAssist.OnContent">
+                        <wpf:PackIcon Kind="Pin" RenderTransformOrigin=".5,.5">
+                            <wpf:PackIcon.RenderTransform>
+                                <RotateTransform Angle="45" />
+                            </wpf:PackIcon.RenderTransform>
+                        </wpf:PackIcon>
+                        <wpf:ToggleButtonAssist.OnContent>
+                            <wpf:PackIcon Kind="Pin"/>
+                        </wpf:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="3" Margin="0 16 0 0" Orientation="Horizontal">
+                <Border  Margin="5 0 0 0" VerticalAlignment="Center">
+                    <ToggleButton Style="{StaticResource FlatToggleButton}" ToolTip="wpfFlatToggleButton">
+                        <wpf:PackIcon Kind="Paperclip" Height="21" Width="21" />
+                    </ToggleButton>
+                </Border>
+                <Border  Margin="8 0 0 0" VerticalAlignment="Center" >
+                    <ToggleButton Style="{StaticResource FlatPrimaryToggleButton}"
+                                  ToolTip="wpfFlatPrimaryToggleButton"
+                                  IsChecked="True">
+                        <wpf:PackIcon Kind="Heart" Height="21" Width="21" />
+                    </ToggleButton>
+                </Border>
+                <Border Margin="8 0 0 0" VerticalAlignment="Center">
+                    <ToggleButton Style="{StaticResource FlatPrimaryToggleButton}"
+                          ToolTip="wpfFlatPrimaryToggleButton"
+                          IsEnabled="False">
+                        <wpf:PackIcon Kind="Heart" Height="21" Width="21" />
+                    </ToggleButton>
+                </Border>
+            </StackPanel>
+
+            <Border  Grid.Column="1" Grid.Row="0" Margin="25,0,0,0" HorizontalAlignment="Left">
+                <!-- the following based on https://material.io/guidelines/components/buttons.html#buttons-toggle-buttons -->
+                <ListBox Style="{StaticResource ToolToggleListBox}" SelectedIndex="0">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="wpfToolToggleListBox" />
+                            <TextBlock Text="Exclusive selection" />
+                            <TextBlock Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                        <wpf:PackIcon Kind="FormatAlignLeft"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <wpf:PackIcon Kind="FormatAlignCenter"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <wpf:PackIcon Kind="FormatAlignRight"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <wpf:PackIcon Kind="FormatAlignJustify"/>
+                    </ListBoxItem>
+                </ListBox>
+            </Border>
+            <Border  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left">
+                <ListBox  SelectionMode="Extended" Style="{StaticResource ToolToggleFlatListBox}">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="wpfToolToggleListBox" />
+                            <TextBlock Text="Multiple selection" />
+                            <TextBlock Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                        <wpf:PackIcon Kind="FormatBold"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <wpf:PackIcon Kind="FormatItalic"/>
+                    </ListBoxItem>
+                    <ListBoxItem x:Name="UnderlineCheckbox">
+                        <wpf:PackIcon Kind="FormatUnderline"/>
+                    </ListBoxItem>
+                </ListBox>
+            </Border>
+
+            <StackPanel Grid.Column="1" Grid.Row="3" Margin="2">
+                <Border  HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal" Margin="4">
+                        <RadioButton Style="{StaticResource TabRadioButton}" Margin="4" IsChecked="True" Content="FIRST"/>
+                        <RadioButton Style="{StaticResource TabRadioButton}" Margin="4" IsChecked="False" Content="SECOND"/>
+                        <RadioButton Style="{StaticResource TabRadioButton}" Margin="4" IsChecked="False" Content="THIRD"/>
+                    </StackPanel>
+                </Border>
+                <Border  HorizontalAlignment="Left">
+                    <wpf:ColorZone Mode="PrimaryMid">
+                        <StackPanel Orientation="Horizontal" Margin="2" >
+                            <RadioButton Style="{StaticResource TabRadioButton}" Margin="4" IsChecked="True" Content="FIRST"/>
+                            <RadioButton Style="{StaticResource TabRadioButton}" Margin="4" IsChecked="False" Content="SECOND"/>
+                            <RadioButton Style="{StaticResource TabRadioButton}" Margin="4" IsChecked="False" Content="THIRD"/>
+                        </StackPanel>
+                    </wpf:ColorZone>
+                </Border>
+
+            </StackPanel>
+        </Grid>
+
+        <Border Grid.Row="9" Margin="0 16 0 0" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource Divider}" />
+        <TextBlock Margin="0 32 0 0" Grid.Row="9" Style="{StaticResource HeadlineTextBlock}">Rating bar</TextBlock>
+        <StackPanel Grid.Row="10" Margin="0 16 0 0" Orientation="Horizontal">
+            <Border  Margin="5 0 0 5">
+                <wpf:RatingBar Value="3" x:Name="BasicRatingBar"  />
+            </Border>
+            <TextBlock Text="{Binding ElementName=BasicRatingBar, Path=Value, StringFormat=Rating: {0}}" VerticalAlignment="Top" Margin="10,2,0,0" />
+
+            <Border  Margin="24 0 0 5">
+                <wpf:RatingBar x:Name="CustomRatingBar" Max="3" Value="2" Orientation="Vertical">
+                    <wpf:RatingBar.ValueItemTemplate>
+                        <DataTemplate DataType="system:Int32">
+                            <Grid>
+                                <wpf:PackIcon Kind="Heart" Height="24" Width="24" />
+                                <TextBlock Text="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           FontSize="8"
+                                           Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </wpf:RatingBar.ValueItemTemplate>
+                </wpf:RatingBar>
+            </Border>
+            <TextBlock Text="{Binding ElementName=CustomRatingBar, Path=Value, StringFormat=Rating: {0}}" VerticalAlignment="Top" Margin="10,2,0,0" />
+
+            <Border Margin="5 0 0 5">
+                <wpf:RatingBar Value="4" IsReadOnly="True" x:Name="ReadOnlyRatingBar"/>
+            </Border>
+            <TextBlock Text="{Binding ElementName=ReadOnlyRatingBar, Path=Value, StringFormat=Readonly Rating: {0}}" VerticalAlignment="Top" Margin="10,2,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>

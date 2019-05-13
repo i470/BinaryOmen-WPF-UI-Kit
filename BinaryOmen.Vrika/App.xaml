@@ -1,0 +1,19 @@
+﻿<Application x:Class="BinaryOmen.Vrika.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BinaryOmen.Vrika"
+             StartupUri="Demo/Buttons.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Colors-Soft.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/BinaryOmen.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/Colors/Gradients.xaml" />
+                <!--<ResourceDictionary Source="pack://application:,,,/BinaryOmen.Vrika;component/Themes/Colors/Blue.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
