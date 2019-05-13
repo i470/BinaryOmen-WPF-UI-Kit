@@ -1,1 +1,1 @@
-# BinaryOmenWPF
+# BinaryOmen WPF UI Kit
